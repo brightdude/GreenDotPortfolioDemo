@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+    <OutputType>Exe</OutputType>
+    <_FunctionsSkipCleanOutput>true</_FunctionsSkipCleanOutput>
+    <RootNamespace>FTR.VirtualJustice</RootNamespace>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="OnDemandMeeting\**" />
+    <EmbeddedResource Remove="OnDemandMeeting\**" />
+    <None Remove="OnDemandMeeting\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\jerem\.nuget\packages\microsoft.azure.cosmos\3.22.1\contentFiles\any\netstandard2.0\ThirdPartyNotice.txt" />
+    <Content Remove="C:\Users\rossb\.nuget\packages\microsoft.azure.cosmos\3.22.1\contentFiles\any\netstandard2.0\ThirdPartyNotice.txt" />
+  </ItemGroup> 
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" Version="4.0.0" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.22.1" />
+    <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.0.13" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.OpenApi" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.3.0" OutputItemType="Analyzer" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.6.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.30" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Graph" Version="4.9.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Polly" Version="7.2.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="local.settings.local.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+    <None Update="local.settings.dev.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.demo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>

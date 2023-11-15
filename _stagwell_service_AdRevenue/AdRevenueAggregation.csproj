@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+
+    <PackageReference Include="Azure.Identity" Version="1.10.4" />
+
+    <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.5.0" />
+
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+	<PackageReference Include="Ardalis.GuardClauses" Version="4.0.0" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.13" />
+	<PackageReference Include="CsvHelper" Version="16.0.0" />
+	<PackageReference Include="Dapper" Version="2.0.90" />
+	<PackageReference Include="AWSSDK.S3" Version="3.3.111.20" />
+	<PackageReference Include="Dapper" Version="2.0.35" />
+	<PackageReference Include="ExcelDataReader" Version="3.6.0" />
+	<PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
+	<PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.2.3" />
+	<PackageReference Include="Microsoft.Azure.Storage.File" Version="11.2.3" />
+	<PackageReference Include="Microsoft.Azure.Storage.Queue" Version="11.2.3" />
+	  <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.1" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+	<PackageReference Include="RestSharp" Version="106.13.0" />
+	<PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+	<PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+	  <PackageReference Include="Polly" Version="7.2.3" />
+
+
+
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+{
+  "require": [
+    "source-map-support/register"
+  ],
+  "recursive": true,
+  "no-timeout": true,
+  "allow-uncaught": true,
+  "file": ["dist/src/helpers/teardown-helper.js"]
+}

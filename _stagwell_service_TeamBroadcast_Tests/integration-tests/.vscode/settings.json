@@ -1,0 +1,4 @@
+{
+  "mochaExplorer.files": "dist/src/**/*.spec.js",
+  "mochaExplorer.require": "source-map-support/register"
+}
